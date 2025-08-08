@@ -89,8 +89,3 @@ GitHub Actions workflow is set up to:
 * Generate the Allure report.
 * Deploy the report to GitHub Pages:
   [📊 View Allure Report](https://mohamedy-selim.github.io/GizaSystemsTask)
-
-## Limitations
-
-* This project only covers GUI automation for XYZ Bank.
-* API testing (PetStore) will be implemented in a separate project.

@@ -5,6 +5,9 @@ on:
     branches: [ main ]
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,7 +18,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '24'
 
       - name: Set up Chrome
@@ -26,8 +29,7 @@ jobs:
       - name: Cache Maven
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.m2/repository
+          path: ~/.m2/repository
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: maven-${{ runner.os }}-
 
@@ -58,12 +60,6 @@ jobs:
         with:
           name: allure-results
           path: ./allure-results
-
-      - name: Pull existing gh-pages (if any)
-        run: |
-          git fetch origin gh-pages || true
-          git worktree add gh-pages gh-pages || true
-        continue-on-error: true
 
       - name: Generate Allure report
         uses: simple-elf/allure-report-action@v1.7

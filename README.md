@@ -1,4 +1,4 @@
-# OrangeHRM Automation Testing
+# OrangeHRM Automation Testin
 
 This project automates login, user management, and candidates features of the OrangeHRM website using Selenium WebDriver with Cucumber and generates Allure reports to track the test results.
 
@@ -64,4 +64,5 @@ Deploys the Allure report to github pages at https://mohamedy-selim.github.io/FT
 ### Limitations
 The current implementation only covers the login, user management, and candidates features. Additional test cases might be needed for full coverage.
 Ensure that the allure-results directory is not empty after the test execution; otherwise, the report generation will fail.
+
 # GizaSystemsTask

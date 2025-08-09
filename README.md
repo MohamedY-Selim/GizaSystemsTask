@@ -1,4 +1,4 @@
-# GizaSystemsTask
+# GizaSystemsGUIAutomationTask
 
 This project automates a set of UI scenarios for the **XYZ Bank** website using Selenium WebDriver with Cucumber, and generates interactive reports using Allure Reports. The tests are executed automatically via GitHub Actions, and the reports are published to GitHub Pages.
 
